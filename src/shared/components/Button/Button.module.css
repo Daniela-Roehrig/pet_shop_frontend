@@ -1,0 +1,31 @@
+.cartBtn {
+    position: static;
+    background-color: var(--rightGradient);
+    color: var(--white);
+    outline: none;
+    border: 2px transparent;
+    border-radius: var(--smallRadius);
+    padding: 16px 32px;
+    font-weight: 600;
+    font-size: var(--h4-font-size);
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.cartBtn:hover {
+    background-color: var(--blackColor);
+    color: var(--rightGradient)
+}
+
+.cartBtn.active {
+    background-color: var(--white);
+    border: 1px solid var(--blackcolor);
+    color: var(--blackColor);
+}
+
+@media (max-width:870px) {
+    .cartBtn{
+        width: inherit;
+    }
+}
+

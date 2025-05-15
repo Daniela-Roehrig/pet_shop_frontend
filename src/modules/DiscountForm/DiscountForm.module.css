@@ -1,0 +1,44 @@
+.discountContainer {
+    background: linear-gradient(to right, var(--leftGradient), var(--rightGradient));
+    border-radius: var(--bigRadius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 32px 0px;
+}
+
+.header {
+    color: var(--white);
+}
+
+.discountFormBox {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+    justify-content: center;
+}
+
+.imageBox {
+    width: 60%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.discountImage {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+@media (max-width: 1090px) {
+ 
+    .discountForm {
+        width: 100%;
+    }
+
+    .imageBox {
+        display: none;
+    }
+}

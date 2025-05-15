@@ -1,0 +1,12 @@
+.saleBox {
+    padding: 4px 8px;
+    background-color: var(--rightGradient);
+    border-radius: 6px;
+}
+
+.saler {
+    color: var(--white);
+    font-weight: 600;
+    font-size: var(--smallSize);
+    line-height: 160%;
+}

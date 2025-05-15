@@ -1,0 +1,39 @@
+.counter {
+    display: flex;
+    width: auto;
+    flex-basis: 45%;
+    justify-content: space-between;
+    height: 100%;
+    border-top: 1px solid var(--greyDivider);
+    border-bottom: 1px solid var(--greyDivider);
+    border-radius: var(--smallRadius);
+}
+
+.quantity {
+    padding: 16px 0px;
+    min-width: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: var(--smallSize);
+    font-weight: 600;
+    color: var(--blackColor);
+    transition: all 0.3s;
+}
+
+.quantityBtn {
+    padding: 17px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--greyDivider);
+    border-top: none;
+    border-bottom: none;
+    border-radius: var(--smallRadius);
+    outline: none;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.quantityBtn:hover {
+    background-color: var(--greyDivider);
+}

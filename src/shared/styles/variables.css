@@ -1,0 +1,22 @@
+:root {
+    --fontSize: 16px;
+    --xxLargeSize: clamp(2.5rem, 6vw, 6rem);
+    --xLargeSize: clamp(2rem, 4vw, 4rem);
+    --largeSize: clamp(1.5rem, 3vw, 2.5rem);
+    --smallSize: clamp(1rem, 2vw, 1.25rem);
+    --xSmallSize: clamp(0.8rem, 1vw, 1rem);
+
+    --blackColor: #282828;
+    --black: #000000;
+    --lightGrey: #F1F3F4;
+    --lightGreyColor: #8B8B8B;
+    --greyDivider: #DDDDDD;
+    --darkGrey: #80808080;
+    --white: #FFFFFF;
+    --leftGradient: #2451C6;
+    --rightGradient: #0D50FF;
+    --errorColor: rgb(203, 6, 6);
+
+    --bigRadius: 12px;
+    --smallRadius: 8px;
+}

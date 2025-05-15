@@ -1,0 +1,18 @@
+.productsList {     
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+    gap: 32px;
+    justify-content: center;
+    list-style: none
+
+}
+
+
+@media (max-width: 670px) {
+    .productsList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}

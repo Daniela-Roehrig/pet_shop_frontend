@@ -1,0 +1,52 @@
+.allcrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: var(--smallRadius);
+    flex-wrap: wrap;
+}
+
+.crumbWrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--smallRadius);
+}
+
+.crumb {
+    padding: 6px 12px;
+    background-color: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--lightGreyColor);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.crumb:hover {
+    color: var(--rightGradient);
+}
+
+.crumbHere {
+    color: var(--blackColor);
+    pointer-events: none;
+}
+
+.spacer {
+    width: 1px;
+    height: 20px;
+    background-color: var(--greyDivider);
+    transform: rotate(90deg);
+}
+
+@media(max-width:1090px) {
+    .breadcrumbs {
+        padding: 0px 20px;
+    }
+}
+
+@media(max-width:870px) {
+    .breadcrumbs {
+        display: none;
+    }
+}

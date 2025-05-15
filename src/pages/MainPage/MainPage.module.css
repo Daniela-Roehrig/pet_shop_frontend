@@ -1,0 +1,51 @@
+.amazingSection {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    height: 600px;
+    padding: 0px 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.amazingSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/src/shared/Icons/websiteImg/main-background.png);
+    z-index: -1;
+}
+
+.amazingH{
+    font-size: 96px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 110px;
+    transform: scaleX(1);
+    padding: 80px 300px 40px 0px
+}
+
+
+
+@media (max-width:1100px) {
+    .heroSection {
+        height: 84vh;
+    }
+    .amazingH{
+        font-size: 65px;
+        line-height: 100px;
+    }
+}
+
+@media (max-width:870px) {
+    .heroSection {
+        margin-bottom: 40px;
+    }
+     .amazingH{
+        font-size: 40px;
+        line-height: 70px;
+    }
+}

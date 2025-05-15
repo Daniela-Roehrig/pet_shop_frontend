@@ -1,0 +1,8 @@
+.registerForm{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--fontSize);
+    padding: 32px 0px;
+}

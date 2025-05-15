@@ -1,0 +1,27 @@
+.descriptionBox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fontSize);
+    min-width: fit-content;
+}
+
+.description {
+    font-size: var(--xSmallSize);
+    line-height: 130%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.readMore {
+    text-decoration: underline;
+    font-size: var(--fontSize);
+    line-height: 130%;
+    font-weight: 500;
+    cursor: pointer;
+}
