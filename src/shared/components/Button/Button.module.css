@@ -14,18 +14,16 @@
 
 .cartBtn:hover {
     background-color: var(--blackColor);
-    color: var(--rightGradient)
+  /*   color: var(--rightGradient) */
 }
 
 .cartBtn.active {
     background-color: var(--white);
     border: 1px solid var(--blackcolor);
-    color: var(--blackColor);
 }
 
 @media (max-width:870px) {
-    .cartBtn{
+    .cartBtn {
         width: inherit;
     }
 }
-
