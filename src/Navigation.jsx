@@ -17,19 +17,14 @@ function Navigation() {
 
             <Routes>
                 <Route path='/' element={<MainPage />} />
-
                 <Route path='/categories' element={<CategoriesPage />} />
                 <Route path='/categories/:categoryId' element={<CategoryProductPage />} />
-
                 <Route path='/products' element={<AllProductsPage />} />
-
                 <Route path='/products/:productId' element={<SingleProductPage />} />
                 <Route path='/categories/:categoryId/products/:productId' element={<SingleProductPage />} />
                 <Route path='/sales/:productId' element={<SingleProductPage />} />
-
                 <Route path='/sales' element={<AllSalesPage />} />
                 <Route path='/cart' element={<CartPage />} />
-
                 <Route path='/error' element={<NotFoundPage />} />
             </Routes>
         </>
