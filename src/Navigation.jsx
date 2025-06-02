@@ -25,7 +25,7 @@ function Navigation() {
                 <Route path='/sales/:productId' element={<SingleProductPage />} />
                 <Route path='/sales' element={<AllSalesPage />} />
                 <Route path='/cart' element={<CartPage />} />
-                <Route path='/error' element={<NotFoundPage />} />
+                <Route path='*' element={<NotFoundPage />} />
             </Routes>
         </>
     )
