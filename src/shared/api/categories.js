@@ -1,12 +1,6 @@
 import backendInstance from './backendInstance';
 import requestDecorator from './requestDecorator';
 
-/* export const getLimitedCategories = requestDecorator(async (limit) => {
-    const { data } = await backendInstance.get('/categories/all', {
-        params: limit ? { limit: limit } : {},
-    });
-    return data;
-}); */
 export const getLimitedCategories = requestDecorator(async (limit, sortBy) => {
     const params = {};
     if (limit) params.limit = limit;
