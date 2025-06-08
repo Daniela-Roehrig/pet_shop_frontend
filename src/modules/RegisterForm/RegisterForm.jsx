@@ -1,34 +1,21 @@
-import { useForm } from "react-hook-form";
-import registerValidationRules from './registerValidation';
-
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { toggleModal } from '../../redux/modal/modalSlice';
 import RegisterFormFields from './RegisterFormFields';
 import styles from './RegisterForm.module.css';
 
 const RegisterForm = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors }
-  } = useForm({
-    defaultValues: {
-      name: '',
-      phone: '',
-      email: '',
-    }
-  });
+  const dispatch = useDispatch();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Register form submitted:", data);
-    reset();
+  const onSubmit = () => {
+    dispatch(toggleModal(true));
+    reset();  // Formular zurücksetzen
   };
 
   return (
     <form className={styles.registerForm} onSubmit={handleSubmit(onSubmit)}>
-      <RegisterFormFields
-        register={(name) => register(name, registerValidationRules[name])}
-        errors={errors}
-      />
+      <RegisterFormFields register={register} errors={errors} />
     </form>
   );
 };

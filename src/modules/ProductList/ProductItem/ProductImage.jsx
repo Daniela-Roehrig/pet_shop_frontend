@@ -7,6 +7,11 @@ const ProductImage = ({ product, onAdd, hovered }) => {
   const { image, price, discont_price } = product;
   const baseURL = backendInstance.defaults.baseURL;
 
+  const handleAddClick = () => {
+    onAdd(product);
+    return true; 
+  };
+
   return (
     <div
       className={styles.productImgBox}
@@ -14,6 +19,7 @@ const ProductImage = ({ product, onAdd, hovered }) => {
         backgroundImage: `url(${baseURL}/${image})`,
         backgroundSize: 'contain',
         backgroundPosition: 'center',
+        position: 'relative',
       }}
     >
       {discont_price && (
@@ -26,13 +32,14 @@ const ProductImage = ({ product, onAdd, hovered }) => {
         />
       )}
       <Button
-        action={() => onAdd(product)}
+        action={handleAddClick}
         status={hovered}
         text="Add to cart"
         position="absolute"
         left="16px"
         right="16px"
         bottom="16px"
+        width="auto"
       />
     </div>
   );

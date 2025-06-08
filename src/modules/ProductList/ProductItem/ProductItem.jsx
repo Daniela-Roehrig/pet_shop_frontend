@@ -1,7 +1,6 @@
 import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-
 import { addToCart } from "../../../redux/cart/cartSlice";
 import ProductImage from "./ProductImage";
 import ProductDescription from "./ProductDescription";

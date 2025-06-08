@@ -1,11 +1,13 @@
 import Input from '../../shared/components/Input/Input';
 import DiscountBtn from '../../shared/components/DiscountBtn/DiscountBtn';
 import styles from './RegisterForm.module.css';
+import registerValidationRules from './registerValidation';
+
 
 const RegisterFormFields = ({ register, errors }) => (
   <>
-    <Input
-      {...register("name")}
+    <Input 
+      {...register("name", registerValidationRules.name)}
       name="name"
       type="text"
       placeholder="Name"
@@ -14,7 +16,7 @@ const RegisterFormFields = ({ register, errors }) => (
     {errors.name && <p className={styles.discontFormError}>{errors.name.message}</p>}
 
     <Input
-      {...register("phone")}
+      {...register("phone", registerValidationRules.phone)}
       name="phone"
       type="text"
       placeholder="Phone Number"
@@ -23,7 +25,7 @@ const RegisterFormFields = ({ register, errors }) => (
     {errors.phone && <p className={styles.discontFormError}>{errors.phone.message}</p>}
 
     <Input
-      {...register("email")}
+      {...register("email", registerValidationRules.email)}
       name="email"
       type="email"
       placeholder="Email"
@@ -31,7 +33,7 @@ const RegisterFormFields = ({ register, errors }) => (
     />
     {errors.email && <p className={styles.discontFormError}>{errors.email.message}</p>}
 
-    <DiscountBtn className={styles.registerBtn}>Get a discount</DiscountBtn>
+    <DiscountBtn className={styles.registerBtn} type="submit">Get a discount</DiscountBtn>
   </>
 );
 

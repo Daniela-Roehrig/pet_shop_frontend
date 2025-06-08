@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import styles from './ModalWindow.module.css';
 import ModalWindowContent from './ModalWindowContent';
+import Section from '../../shared/components/Section/Section';
 
-const ModalWindow = ({ isOpen, onClose }) => {
+const ModalWindow = ({ isOpen, onClose, title, firstParagraph, secondParagraph }) => {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -18,10 +19,20 @@ const ModalWindow = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
+        <Section>
         <div className={styles.modalBG} onClick={onClose}>
-            <ModalWindowContent onClose={onClose} />
+            <div onClick={(e) => e.stopPropagation()}>
+                <ModalWindowContent
+                    onClose={onClose}
+                    title={title}
+                    firstParagraph={firstParagraph}
+                    secondParagraph={secondParagraph}
+                />
+            </div>
         </div>
+        </Section>
     );
 };
 
 export default ModalWindow;
+

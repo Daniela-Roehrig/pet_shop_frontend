@@ -5,7 +5,6 @@ import Section from "../../shared/components/Section/Section";
 import CartEmptyMessage from "./CartEmptyMessage";
 import CartItemList from "./CartItemList";
 import CartSummary from "./CartSummary";
-import Breadcrumbs from "../../shared/components/BreadCrumbs/BreadCrumbs";
 
 import styles from './Cart.module.css';
 

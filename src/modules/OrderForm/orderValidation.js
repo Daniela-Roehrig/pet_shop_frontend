@@ -5,6 +5,10 @@ const orderValidationRules = {
       value: 5,
       message: "Name must be at least 5 characters",
     },
+    pattern: {
+      value: /^[A-Za-z\s]+$/,
+      message: "Name cannot contain numbers or special characters",
+    }
   },
   phone: {
     required: "Phone number is required",

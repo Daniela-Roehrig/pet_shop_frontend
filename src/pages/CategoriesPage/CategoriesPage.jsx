@@ -6,6 +6,8 @@ import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 
 const CategoriesPage = () => {
     return (
+
+        
         <Section>
             <Breadcrumbs custom={[{ name: "Categories", to: "/categories" }]} />
             <SectionTitle>Categories</SectionTitle>
