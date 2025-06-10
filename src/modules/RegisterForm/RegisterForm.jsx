@@ -10,7 +10,7 @@ const RegisterForm = () => {
 
   const onSubmit = () => {
     dispatch(toggleModal(true));
-    reset();  // Formular zurücksetzen
+    reset();  
   };
 
   return (
